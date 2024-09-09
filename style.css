@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+.image{
+    padding: 20px;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.image .box{
+    width: 300px ;
+    height: 300px ;
+    position: relative;
+    cursor: pointer;
+}
+
+
+
+.image .box span{
+    position: absolute;
+    width: 300px;
+    height: 2px;
+    background-color: aqua;
+    pointer-events: none;
+    background-image: url(./img/img1.jpg);
+    background-size: 300px;
+    transform: translateX(var(--x)) rotate(var(--r));
+    transition: 0.01s ease-in-out;
+}
+
+.image .box:nth-child(2) span{
+    background-image: url(./img/img2.jpg);
+}
+
+.image .box:nth-child(3) span{
+    background-image: url(./img/img3.jpg);
+}
+
+.image .box:nth-child(4) span{
+    background-image: url(./img/img4.jpg);
+}
+
+.image .box:nth-child(5) span{
+    background-image: url(./img/img5.jpg);
+}
+
+.image .box:nth-child(6) span{
+    background-image: url(./img/img6.jpg);
+}
+
+.image .box:hover span {
+    transform: translateX(0) rotate(0);
+    z-index: 1;
+}
